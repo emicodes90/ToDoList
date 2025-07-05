@@ -6,8 +6,11 @@ const cors = require("cors");
 
 const app = express();
 
-const PORT = process.env.PORT || 8080;
-const MONGOURL = process.env.MONGOURL;
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 
 app.use(express.json());
 app.use(cors({ origin: "*" }));
